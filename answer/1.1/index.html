@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="老生常谈的问题">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.5px 边框</title>
+    <style>
+        .border {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #eee;
+        }
+
+        .border::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            border: 1px solid #f40;
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scale(.5, .5);
+            -ms-transform: scale(.5, .5);
+            -o-transform: scale(.5, .5);
+            transform: scale(.5, .5);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border"></div>
+</body>
+
+</html>
